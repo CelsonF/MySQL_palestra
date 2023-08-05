@@ -5,9 +5,9 @@ Schema de Dados
 
 
 ### Cria Base de dados com nome População sem acentuação.
-´´´sql
+```sql
 CREATE DATABASE POPULACAO;
-´´´
+```
 
 USE POPULACAO;
 
