@@ -72,7 +72,8 @@ CREATE TABLE EMAILS (
 ); 
 ```
  
--- Inserir e-mails fictícios para todas as pessoas na tabela EMAILS
+### Inserir e-mails fictícios para todas as pessoas na tabela EMAILS
+```sql
 INSERT INTO EMAILS (PESSOA_ID, EMAIL) VALUES
 (1, 'joao_01334564320@exemplo.com'),
 (2, 'maria_02232464340@exemplo.com'),
@@ -97,17 +98,22 @@ INSERT INTO EMAILS (PESSOA_ID, EMAIL) VALUES
 (21, 'ricardo_11122233344@exemplo.com'),
 (22, 'carolina_55566677788@exemplo.com'),
 (23, 'eduardo_99900011122@exemplo.com');
+```
 
 
 
-
--- READ(Ler) - Leitura de todos os items da tabela
+### READ(Ler) - Leitura de todos os items da tabela
+```sql
 SELECT * FROM PESSOAS;
+```
 
--- Leitura de tabela colunas específicos 
+### Leitura de tabela colunas específicos 
+```sql
 SELECT p.nome, p.cidade FROM PESSOAS p;
+```
 
--- Leitura com condições específicas - neste caso idade
+### Leitura com condições específicas - neste caso idade
+```sql
 SELECT 
 	p.idade,
 	p.nome, 
@@ -116,7 +122,7 @@ FROM
 	PESSOAS p
 WHERE
     p.idade >= 28 AND p.idade <= 32;
-
+```
 
 /* 
 WHERE p.nome LIKE 'a%': Isso encontra quaisquer valores que comecem com "a".
