@@ -115,11 +115,11 @@ SELECT p.nome, p.cidade FROM PESSOAS p;
 ### Leitura com condições específicas - neste caso idade
 ```sql
 SELECT 
-	p.idade,
-	p.nome, 
+    p.idade,
+    p.nome, 
     p.cidade
 FROM 
-	PESSOAS p
+    PESSOAS p
 WHERE
     p.idade >= 28 AND p.idade <= 32;
 ```
@@ -134,38 +134,51 @@ WHERE p.nome LIKE 'a__%': Isso encontra quaisquer valores que comecem com "a" e 
 WHERE p.nome LIKE 'a%o': Isso encontra quaisquer valores que comecem com "a" e terminem com "o"
 */
 
--- Leitura de condicional com operador LIKE e nome que começa com a letra C
+### Leitura de condicional com operador LIKE e nome que começa com a letra C
+
+```sql
 SELECT 
-	p.idade,
-	p.nome, 
+    p.idade,
+    p.nome, 
     p.cidade
 FROM 
 	PESSOAS p
 WHERE
     p.nome LIKE 'c%';
+```
 
 
--- UPDATE(ATUALIZAR) é a operação para modificar os arquivos já gravados na tabela.
--- EXEMPLO a ser atualizado ('013.345.643-20', 'João', 25, 'M', 'São Paulo'),
+### UPDATE(ATUALIZAR) é a operação para modificar os arquivos já gravados na tabela.
+### EXEMPLO a ser atualizado ('013.345.643-20', 'João', 25, 'M', 'São Paulo'),
+
+```sql
 SELECT * FROM PESSOAS p; 
+```
 
+```sql
 UPDATE 
-	PESSOAS p
+   PESSOAS p
 SET 
-	p.cidade = 'Ouro Preto'
+   p.cidade = 'Ouro Preto'
 WHERE p.id = 1;
 
 SELECT * FROM PESSOAS p;
+```
 
--- DELETE(Deletar) - Deletado o ID - 1 , Nome João
+### DELETE(Deletar) - Deletado o ID - 1 , Nome João
+```sql
 DELETE FROM PESSOAS p WHERE p.id = 1;
+```
 
--- Porque não deltar pelo nome 
+### Porque não deltar pelo nome
+```sql 
 DELETE FROM PESSOAS p WHERE p.nome = 'João'; 
+```
 
 
-
--- Leitura juntando as 2 tabelas atraves do ID
+### Leitura juntando as 2 tabelas atraves do ID
+```sql 
 SELECT p.nome, e.email 
 FROM pessoas p , emails e 
 WHERE e.id = p.id
+```
