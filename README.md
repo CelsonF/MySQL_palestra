@@ -8,9 +8,13 @@ Schema de Dados
 ```sql
 CREATE DATABASE POPULACAO;
 ```
-
+### Seleciona qual banco de dados iremos alterar.
+```sql
 USE POPULACAO;
+```
 
+### Cria Tabela Pessoas
+```sql 
 CREATE TABLE PESSOAS (
 ID INT auto_increment primary key,
 CPF varchar(14),
@@ -19,12 +23,16 @@ IDADE int,
 SEXO char,
 CIDADE varchar(250)
 );
+```
 
+### Simular error
+```sql 
 -- Erro ao Inserir linha , demonstrar console.
 INSERT INTO PESSOA (nome, idade, sexo ,cidade) VALUES
 ('João', 25, 'M',  'São Paulo'),
 ('Maria', 30, 'F', 'Rio de Janeiro'),
 ('Carlos', 22, 'M', 'Belo Horizonte');
+```
 
 -- Create(Criar)
 INSERT INTO PESSOAS (cpf, nome, idade, sexo ,cidade) VALUES
