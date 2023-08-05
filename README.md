@@ -34,7 +34,8 @@ INSERT INTO PESSOA (nome, idade, sexo ,cidade) VALUES
 ('Carlos', 22, 'M', 'Belo Horizonte');
 ```
 
--- Create(Criar)
+### Create(Criar)
+```sql
 INSERT INTO PESSOAS (cpf, nome, idade, sexo ,cidade) VALUES
 ('013.345.643-20', 'João', 25, 'M', 'São Paulo'),
 ('022.324.643-40', 'Maria', 30, 'F', 'Rio de Janeiro'),
@@ -59,16 +60,17 @@ INSERT INTO PESSOAS (cpf, nome, idade, sexo ,cidade) VALUES
 ('111.222.333-44', 'Ricardo', 33, 'M', 'São Paulo'),
 ('555.666.777-88', 'Carolina', 24, 'F', 'Rio de Janeiro'),
 ('999.000.111-22', 'Eduardo', 31, 'M', 'Belo Horizonte');
+```
 
-
--- Relacionamento com outra tabela CHAMADA - EMAIL	
+### Relacionamento com outra tabela CHAMADA - EMAIL	
+```sql
 CREATE TABLE EMAILS (
     ID INT AUTO_INCREMENT PRIMARY KEY,
     PESSOA_ID INT,
     EMAIL VARCHAR(255),
     FOREIGN KEY (PESSOA_ID) REFERENCES PESSOAS(ID) ON DELETE CASCADE
 ); 
- 
+```
  
 -- Inserir e-mails fictícios para todas as pessoas na tabela EMAILS
 INSERT INTO EMAILS (PESSOA_ID, EMAIL) VALUES
