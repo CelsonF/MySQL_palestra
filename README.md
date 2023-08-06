@@ -129,25 +129,60 @@ WHERE
 
 ```sql
 -- Isso encontra quaisquer valores que comecem com "a".
-WHERE p.nome LIKE 'a%'
+SELECT 
+    p.nome
+FROM
+    PESSOAS p
+WHERE
+    p.nome LIKE 'a%';
 
 -- Isso encontra quaisquer valores que terminem com "a".
-WHERE p.nome LIKE '%a'
+SELECT 
+    p.nome
+FROM
+    PESSOAS p
+WHERE
+     p.nome LIKE '%a';
 
 -- Isso encontra quaisquer valores que contenham "or" em qualquer posição.
-WHERE p.nome LIKE '%or%'
+SELECT 
+    p.nome
+FROM
+    PESSOAS p
+WHERE
+    p.nome LIKE '%or%';
 
 -- Isso encontra quaisquer valores que tenham "r" na segunda posição.
-WHERE p.nome LIKE '_r%'
+SELECT 
+    p.nome
+FROM
+    PESSOAS p
+WHERE
+    p.nome LIKE '_r%';
 
 -- Isso encontra quaisquer valores que comecem com "a" e tenham pelo menos 2 caracteres de comprimento.
-WHERE p.nome LIKE 'a_%'
+SELECT 
+    p.nome
+FROM
+    PESSOAS p
+WHERE
+    p.nome LIKE 'a_%';
 
 -- Isso encontra quaisquer valores que comecem com "a" e tenham pelo menos 3 caracteres de comprimento.
-WHERE p.nome LIKE 'a__%'
+SELECT 
+    p.nome
+FROM
+    PESSOAS p
+WHERE
+    p.nome LIKE 'a__%';
 
 -- Isso encontra quaisquer valores que comecem com "a" e terminem com "o"
-WHERE p.nome LIKE 'a%o'
+SELECT 
+    p.nome
+FROM
+    PESSOAS p
+WHERE
+    p.nome LIKE 'a%o';
 ```
 
 ### Leitura de condicional com operador LIKE e nome que começa com a letra C
@@ -194,7 +229,12 @@ DELETE FROM PESSOAS p WHERE p.nome = 'João';
 
 ### Leitura juntando as 2 tabelas atraves do ID
 ```sql 
-SELECT p.nome, e.email 
-FROM pessoas p , emails e 
-WHERE e.id = p.id
+SELECT
+   p.nome,
+   e.email 
+FROM
+   pessoas p ,
+   emails e 
+WHERE
+   e.id = p.id;
 ```
