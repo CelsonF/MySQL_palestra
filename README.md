@@ -124,15 +124,31 @@ WHERE
     p.idade >= 28 AND p.idade <= 32;
 ```
 
-/* 
-WHERE p.nome LIKE 'a%': Isso encontra quaisquer valores que comecem com "a".
-WHERE p.nome LIKE '%a': Isso encontra quaisquer valores que terminem com "a".
-WHERE p.nome LIKE '%or%': Isso encontra quaisquer valores que contenham "or" em qualquer posição.
-WHERE p.nome LIKE '_r%': Isso encontra quaisquer valores que tenham "r" na segunda posição.
-WHERE p.nome LIKE 'a_%': Isso encontra quaisquer valores que comecem com "a" e tenham pelo menos 2 caracteres de comprimento.
-WHERE p.nome LIKE 'a__%': Isso encontra quaisquer valores que comecem com "a" e tenham pelo menos 3 caracteres de comprimento.
-WHERE p.nome LIKE 'a%o': Isso encontra quaisquer valores que comecem com "a" e terminem com "o"
-*/
+
+### Exemplos de código, para Realizar pesquisa com condicionais em STRING 
+
+```sql
+-- Isso encontra quaisquer valores que comecem com "a".
+WHERE p.nome LIKE 'a%'
+
+-- Isso encontra quaisquer valores que terminem com "a".
+WHERE p.nome LIKE '%a'
+
+-- Isso encontra quaisquer valores que contenham "or" em qualquer posição.
+WHERE p.nome LIKE '%or%'
+
+-- Isso encontra quaisquer valores que tenham "r" na segunda posição.
+WHERE p.nome LIKE '_r%'
+
+-- Isso encontra quaisquer valores que comecem com "a" e tenham pelo menos 2 caracteres de comprimento.
+WHERE p.nome LIKE 'a_%'
+
+-- Isso encontra quaisquer valores que comecem com "a" e tenham pelo menos 3 caracteres de comprimento.
+WHERE p.nome LIKE 'a__%'
+
+-- Isso encontra quaisquer valores que comecem com "a" e terminem com "o"
+WHERE p.nome LIKE 'a%o'
+```
 
 ### Leitura de condicional com operador LIKE e nome que começa com a letra C
 
